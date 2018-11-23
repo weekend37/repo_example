@@ -50,7 +50,7 @@ def one_hot_encoding(board, nSecondRoll):
 
 
 # this epsilon greedy policy uses a feed-forward neural network to approximate the after-state value function
-def action_test(board, dice, oplayer, i = 0):
+def action(board, dice, oplayer, i = 0):
 
     flippedplayer = -1
     if (flippedplayer == oplayer): # view it from player 1 perspective
