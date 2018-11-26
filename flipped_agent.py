@@ -4,7 +4,7 @@
 an example of an intelligent agent who flips the board
 """
 import numpy as np
-import Backgammon
+import BG_Competition
 
 def flip_board(board_copy):
     #flips the game board and returns a new copy
@@ -31,7 +31,7 @@ def action(board_copy,dice,player,i):
     if player == -1: board_copy = flip_board(board_copy)
         
     # check out the legal moves available for the throw
-    possible_moves, possible_boards = Backgammon.legal_moves(board_copy, dice, player=1)
+    possible_moves, possible_boards = BG_Competition.legal_moves(board_copy, dice, player=1)
     
     # if there are no moves available, return an empty move
     if len(possible_moves) == 0: 

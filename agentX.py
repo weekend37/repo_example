@@ -16,7 +16,7 @@ perceive the board as player 1
 import numpy as np
 import torch
 from torch.autograd import Variable
-import Backgammon
+import BG_Competition
 import flipped_agent
 device = torch.device('cpu')
 
@@ -58,7 +58,7 @@ def action(board, dice, oplayer, i = 0):
         player = -oplayer # player now the other player +1
     else:
         player = oplayer
-    possible_moves, possible_boards = Backgammon.legal_moves(board, dice, player)
+    possible_moves, possible_boards = BG_Competition.legal_moves(board, dice, player)
     na = len(possible_boards)
     if (na == 0):
         return []
